@@ -2,20 +2,30 @@
 # SDCND : Sensor Fusion and Tracking
 This is the project for the second course in the  [Udacity Self-Driving Car Engineer Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213) : Sensor Fusion and Tracking. 
 
-In this project, you'll fuse measurements from LiDAR and camera and track vehicles over time. You will be using real-world data from the Waymo Open Dataset, detect objects in 3D point clouds and apply an extended Kalman filter for sensor fusion and tracking.
+*Acknowledgements*
 
-<img src="img_title_1.jpeg"/>
+Any copyright of skeleton code belongs to Udacity. Refer to the License at the end of page.
 
-The project consists of two major parts: 
-1. **Object detection**: In this part, a deep-learning approach is used to detect vehicles in LiDAR data based on a birds-eye view perspective of the 3D point-cloud. Also, a series of performance measures is used to evaluate the performance of the detection approach. 
-2. **Object tracking** : In this part, an extended Kalman filter is used to track vehicles over time, based on the lidar detections fused with camera detections. Data association and track management are implemented as well.
+
+## Pt1. Deep Detection Network on Lidar Data
+In this project, I use lidar and camera data from the Waymo Open Dataset, and detect objects in the 3D point clouds using a pretrained complex-yolo implementation.
+
+![
+<img src="img_title_1.jpeg"/>](lidar_bev.webp)
+
+## Pt2. Multiple Target Tracking(Association+Track Management)
+I used the extended Kalman filter to track vehicles over time. Data association and track management are implemented as well.
 
 The following diagram contains an outline of the data flow and of the individual steps that make up the algorithm. 
 
 <img src="img_title_2_new.png"/>
 
-Also, the project code contains various tasks, which are detailed step-by-step in the code. More information on the algorithm and on the tasks can be found in the Udacity classroom. 
 
+Run Example:
+
+On the right, a vehicle approaching on the first lane is given its track, which appears on the right. Initially, the track is red(initialized), and as more data is associated to the vehicle, the track is verified, and appears as green.
+
+![Alt text](trackmgmt.webp)
 
 
 ### Package Requirements
